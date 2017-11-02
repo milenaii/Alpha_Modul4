@@ -1,0 +1,23 @@
+﻿@*ModelBinders_Demo*@
+@*формичката трябва да сочи към "ProfileTest"*@
+
+@model  ModelBinders_Demo.Models.ProfileViewModel
+
+@using (Html.BeginForm("ProfileTest"))
+{
+
+    @Html.DisplayFor(m => m.FirstName)
+    @*@Html.DisplayFor(m => m.Age)
+    @Html.DislayFor(m => m.BirthDay)*@
+    @Html.EditorFor(m => m.FirstName)
+    @Html.EditorFor(m => m.Age)
+    @Html.EditorFor(m => m.BirthDay)
+
+    @*<input type="text" name="FirstName"/>
+        <input type="number" name="Age"/>*@
+
+    <input type="submit" />
+}
+
+@*ModelBinders_Demo*@
+
