@@ -9,6 +9,8 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Live_Demo_Alpha.Models;
+using Live_Demo_Alpha.Data.Models;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Live_Demo_Alpha.Controllers
 {

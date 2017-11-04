@@ -6,6 +6,8 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using Live_Demo_Alpha.Models;
+using Live_Demo_Alpha.Data.Models;
+using Live_Demo_Alpha.Data;
 
 namespace Live_Demo_Alpha
 {

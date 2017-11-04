@@ -1,19 +1,40 @@
-﻿using Live_Demo_Alpha.Models;
-using Microsoft.AspNet.Identity.EntityFramework;
-using System;
-using System.Collections.Generic;
+﻿using Live_Demo_Alpha.DataServices;
+using Live_Demo_Alpha.Models;
 using System.Linq;
-using System.Threading.Tasks;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Live_Demo_Alpha.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IBlogPostService blogPostService;
+
+        public HomeController(IBlogPostService blogPostService)
+        {
+            this.blogPostService = blogPostService;
+        }
+
         public ActionResult Index()
         {
             return View();
+        }
+
+        [ChildActionOnly]
+        [OutputCache(Duration = 3600)]
+        public ActionResult GetBlogPosts()
+        {
+            var viewModel = this.blogPostService.
+                GetTopPosts(3)
+                .Select(b =>
+                new BlogPostViewModel()
+                {
+                    Title = b.Title,
+                    Content = b.Content,
+                    Author = b.Author
+                })
+                .ToList();
+
+            return this.PartialView("_TopPosts", viewModel);
         }
 
         [Authorize]

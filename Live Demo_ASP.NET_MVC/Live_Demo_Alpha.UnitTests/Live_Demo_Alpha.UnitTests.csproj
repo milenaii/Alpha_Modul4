@@ -99,7 +99,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Areas\Admin\Controllers\AdminControllerTests\AllUsers_Should.cs" />
+    <Compile Include="DataServices\BlogPostServiceTests\AddBlogPost_Should.cs" />
+    <Compile Include="Web\Areas\Admin\Controllers\AdminControllerTests\AllUsers_Should.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -107,6 +108,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Live_Demo_Alpha.DataServices\Live_Demo_Alpha.DataServices.csproj">
+      <Project>{f7fb778a-e9dd-4c1c-a3f7-832dbcef0e9f}</Project>
+      <Name>Live_Demo_Alpha.DataServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Live_Demo_Alpha.Data\Live_Demo_Alpha.Data.csproj">
+      <Project>{f50da3dc-2c4e-472e-93ed-99d3b4cc0df7}</Project>
+      <Name>Live_Demo_Alpha.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Live_Demo_Alpha\Live_Demo_Alpha.csproj">
       <Project>{a83d8d7c-c0ee-4fac-97b4-7c611fc1fd41}</Project>
       <Name>Live_Demo_Alpha</Name>

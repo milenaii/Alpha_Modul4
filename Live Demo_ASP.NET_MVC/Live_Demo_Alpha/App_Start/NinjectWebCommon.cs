@@ -5,6 +5,8 @@ using Ninject;
 using Ninject.Web.Common;
 using Microsoft.AspNet.Identity.Owin;
 using Live_Demo_Alpha.Models;
+using Live_Demo_Alpha.Data;
+using Live_Demo_Alpha.DataServices;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(Live_Demo_Alpha.App_Start.NinjectWebCommon), "Start")]
 [assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(Live_Demo_Alpha.App_Start.NinjectWebCommon), "Stop")]
@@ -72,7 +74,11 @@ namespace Live_Demo_Alpha.App_Start
                 .ToMethod(_ => HttpContext
                 .Current
                 .GetOwinContext()
-                .GetUserManager<ApplicationDbContext>());
+                .GetUserManager<ApplicationDbContext>())
+                .InRequestScope();
+
+            kernel.Bind<IBlogPostService>()
+                .To<BlogPostService>().InRequestScope();
         }        
     }
 }

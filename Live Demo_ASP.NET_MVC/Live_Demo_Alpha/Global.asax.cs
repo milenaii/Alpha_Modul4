@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Live_Demo_Alpha.Data;
+using Live_Demo_Alpha.Data.Migrations;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -19,6 +22,8 @@ namespace Live_Demo_Alpha
 
             ViewEngines.Engines.Clear();
             ViewEngines.Engines.Add(new RazorViewEngine());
+
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<ApplicationDbContext, Configuration>());
         }
     }
 }

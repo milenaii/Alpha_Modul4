@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Live_Demo_Alpha", "Live_Dem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Live_Demo_Alpha.UnitTests", "Live_Demo_Alpha.UnitTests\Live_Demo_Alpha.UnitTests.csproj", "{0B90F513-9F3B-4525-95DA-3B5FBA349F40}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Live_Demo_Alpha.Data", "Live_Demo_Alpha.Data\Live_Demo_Alpha.Data.csproj", "{F50DA3DC-2C4E-472E-93ED-99D3B4CC0DF7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{E3649BCA-7DC5-4992-9C47-B9F66D0B95EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Live_Demo_Alpha.DataServices", "Live_Demo_Alpha.DataServices\Live_Demo_Alpha.DataServices.csproj", "{F7FB778A-E9DD-4C1C-A3F7-832DBCEF0E9F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,8 +27,20 @@ Global
 		{0B90F513-9F3B-4525-95DA-3B5FBA349F40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B90F513-9F3B-4525-95DA-3B5FBA349F40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B90F513-9F3B-4525-95DA-3B5FBA349F40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F50DA3DC-2C4E-472E-93ED-99D3B4CC0DF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F50DA3DC-2C4E-472E-93ED-99D3B4CC0DF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F50DA3DC-2C4E-472E-93ED-99D3B4CC0DF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F50DA3DC-2C4E-472E-93ED-99D3B4CC0DF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7FB778A-E9DD-4C1C-A3F7-832DBCEF0E9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7FB778A-E9DD-4C1C-A3F7-832DBCEF0E9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7FB778A-E9DD-4C1C-A3F7-832DBCEF0E9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7FB778A-E9DD-4C1C-A3F7-832DBCEF0E9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F50DA3DC-2C4E-472E-93ED-99D3B4CC0DF7} = {E3649BCA-7DC5-4992-9C47-B9F66D0B95EF}
+		{F7FB778A-E9DD-4C1C-A3F7-832DBCEF0E9F} = {E3649BCA-7DC5-4992-9C47-B9F66D0B95EF}
 	EndGlobalSection
 EndGlobal
