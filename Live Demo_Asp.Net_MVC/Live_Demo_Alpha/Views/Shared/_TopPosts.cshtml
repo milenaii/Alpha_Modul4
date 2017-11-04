@@ -1,0 +1,13 @@
+﻿@model IEnumerable<BlogPostViewModel>
+@foreach (var blogPost in @Model)
+{
+    <div>
+        Author: @blogPost.Author
+    </div>
+    <div>
+        Title: @blogPost.Title
+    </div>
+    <div>
+        Content: @blogPost.Content
+    </div>
+}
