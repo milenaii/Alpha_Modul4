@@ -1,0 +1,39 @@
+﻿@model BlogPostContainerViewModel
+
+<h2>Blog posts for user</h2>
+@using (Html.BeginForm("Index", "BlogPost", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div>
+        @Html.LabelFor(m => m.CreateBlogPost.Title, "Title:")
+        @Html.EditorFor(m => m.CreateBlogPost.Title)
+        @Html.ValidationMessageFor(m => m.CreateBlogPost.Title)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.CreateBlogPost.Content, "Content:")
+        @Html.EditorFor(m => m.CreateBlogPost.Content)
+        @Html.ValidationMessageFor(m => m.CreateBlogPost.Content)
+    </div>
+    <div>
+        <input type="submit" value="Save" />
+    </div>
+}
+
+<h3>Blog posts</h3>
+@if (@Model.BlogPosts != null)
+{
+    foreach (var blogPost in @Model.BlogPosts)
+    {
+        <div>
+            Title: @blogPost.Title
+        </div>
+        <div>
+            Content: @blogPost.Content
+        </div>
+    }
+}
+
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
